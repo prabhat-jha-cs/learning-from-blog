@@ -1,0 +1,31 @@
+:root {
+  --circle-size: 3rem;
+  --spacing: 0.5rem;
+}
+.c-stepper__item {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.c-stepper__item:before {
+  position: relative;
+  flex: 0 0 var(--circle-size);
+  height: var(--circle-size);
+  content: "";
+  z-index: 1;
+  border-radius: 999px;
+  background-color: lightgrey;
+}
+
+.c-stepper__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(var(--circle-size) + var(--spacing));
+  bottom: var(--spacing);
+  transform: translateX(calc(var(--circle-size) / 2));
+  width: 2px;
+  background-color: #e0e0e0;
+}

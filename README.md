@@ -1,2 +1,3 @@
-# learning-from-blog
-learning from blog
+# learning-from-blogs
+
+learning from blogs
